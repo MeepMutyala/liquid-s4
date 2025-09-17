@@ -16,12 +16,12 @@ if optimized:
 else:
     contract = torch.einsum
 
-# from src.models.sequence.ss.kernel import SSKernel, _conj
-# from src.models.nn import LinearActivation, Activation, DropoutNd
+from src.models.sequence.ss.kernel import SSKernel, _conj
+from src.models.nn import LinearActivation, Activation, DropoutNd
 # from ..ss.kernel import SSKernel, _conj
 # from ...nn import LinearActivation, Activation, DropoutNd
-from models.sequence.ss.kernel import SSKernel, _conj
-from models.nn import LinearActivation, Activation, DropoutNd
+# from models.sequence.ss.kernel import SSKernel, _conj
+# from models.nn import LinearActivation, Activation, DropoutNd
 
 class LeCun(nn.Module):
     def __init__(self):

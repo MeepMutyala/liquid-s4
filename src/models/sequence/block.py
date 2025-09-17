@@ -10,19 +10,19 @@ residual options: feedforward, residual, affine scalars, depth-dependent scaling
 from torch import nn
 
 from functools import partial
+import src.utils as utils
+from src.models.nn.components import Normalization, StochasticDepth, DropoutNd
+from src.models.sequence import SequenceModule
+from src.models.sequence.pool import registry as pool_registry
+from src.models.nn.residual import registry as residual_registry
+import src.utils.registry as registry
 
-# from src.models.nn.components import Normalization, StochasticDepth, DropoutNd
-# from src.models.sequence import SequenceModule
-# from src.models.sequence.pool import registry as pool_registry
-# from src.models.nn.residual import registry as residual_registry
-# import src.utils.registry as registry
-# import src.utils as utils
-import utils as utils
-from models.nn.components import Normalization, StochasticDepth, DropoutNd
-from models.sequence import SequenceModule
-from models.sequence.pool import registry as pool_registry
-from models.nn.residual import registry as residual_registry
-import utils.registry as registry
+# import utils as utils
+# from models.nn.components import Normalization, StochasticDepth, DropoutNd
+# from models.sequence import SequenceModule
+# from models.sequence.pool import registry as pool_registry
+# from models.nn.residual import registry as residual_registry
+# import utils.registry as registry
 
 class SequenceResidualBlock(SequenceModule):
     def __init__(
