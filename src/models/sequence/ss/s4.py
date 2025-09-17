@@ -16,8 +16,8 @@ if optimized:
 else:
     contract = torch.einsum
 
-from src.models.sequence.ss.kernel import SSKernel, _conj
-from src.models.nn import LinearActivation, Activation, DropoutNd
+from .kernel import SSKernel, _conj
+from ...nn import LinearActivation, Activation, DropoutNd
 # from ..ss.kernel import SSKernel, _conj
 # from ...nn import LinearActivation, Activation, DropoutNd
 # from models.sequence.ss.kernel import SSKernel, _conj
@@ -89,11 +89,10 @@ class S4(nn.Module):
         """
 
         super().__init__()
-        import src.utils.train
-        log = src.utils.train.get_logger(__name__)
+        from ....utils import train
+        log = train.get_logger(__name__)
         if verbose:
             log.info(f"Constructing S4 (H, N, L) = ({d_model}, {d_state}, {l_max})")
-            log = src.utils.train.get_logger(__name__)
         if liquid_degree <= 1:
             raise ValueError(f"Illegal argument for liquid_degree ({liquid_degree}). Valid options are >= 2")
         if liquid_kernel is not None:

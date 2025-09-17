@@ -3,10 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange, reduce
 
-import src.models.nn.utils as U
-import src.utils as utils
-import src.utils.config
-import src.utils.train
+from ..models.nn import utils as U
+from .. import utils
+from ..utils import config
+from ..utils import train
 
 # from ..models.nn import utils as U
 # from ..utils import config
@@ -17,7 +17,7 @@ import src.utils.train
 # from utils import config
 # from utils import train
 
-log = src.utils.train.get_logger(__name__)
+log = train.get_logger(__name__)
 
 
 class Decoder(nn.Module):
