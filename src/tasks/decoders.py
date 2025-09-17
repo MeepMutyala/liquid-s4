@@ -8,10 +8,14 @@ from einops import rearrange, reduce
 # import src.utils.config
 # import src.utils.train
 
-from ..models.nn import utils as U
-from ..utils import config
-from ..utils import train
+# from ..models.nn import utils as U
+# from ..utils import config
+# from ..utils import train
 # from .. import utils  # Equivalent of 'import src.utils as utils'
+
+from models.nn import utils as U
+from utils import config
+from utils import train
 
 log = src.utils.train.get_logger(__name__)
 
