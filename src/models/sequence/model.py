@@ -9,10 +9,10 @@ import torch
 import torch.nn as nn
 from einops import rearrange
 
-from ...utils.config import to_list, to_dict
-from .block import SequenceResidualBlock
-from .base import SequenceModule
-from ..nn.components import Normalization, DropoutNd
+# from ...utils.config import to_list, to_dict
+# from .block import SequenceResidualBlock
+# from .base import SequenceModule
+# from ..nn.components import Normalization, DropoutNd
 
 # changing to relative imports so we can use submodules outside of this directory
 # from ...utils.config import to_list, to_dict
@@ -20,10 +20,10 @@ from ..nn.components import Normalization, DropoutNd
 # from .base import SequenceModule  
 # from ..nn.components import Normalization, DropoutNd
 
-# from utils.config import to_list, to_dict
-# from models.sequence.block import SequenceResidualBlock
-# from models.sequence.base import SequenceModule  
-# from models.nn.components import Normalization, DropoutNd
+from utils.config import to_list, to_dict
+from models.sequence.block import SequenceResidualBlock
+from models.sequence.base import SequenceModule  
+from models.nn.components import Normalization, DropoutNd
 
 
 class SequenceModel(SequenceModule):
