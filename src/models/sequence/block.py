@@ -10,12 +10,12 @@ residual options: feedforward, residual, affine scalars, depth-dependent scaling
 from torch import nn
 
 from functools import partial
-from ... import utils
-from ..nn.components import Normalization, StochasticDepth, DropoutNd
+from liquid_s4.utils import config as utils
+from liquid_s4.models.nn.components import Normalization, StochasticDepth, DropoutNd
 from . import SequenceModule
 from .pool import registry as pool_registry
-from ..nn.residual import registry as residual_registry
-from ...utils import registry
+from liquid_s4.models.nn.residual import registry as residual_registry
+from liquid_s4.utils import registry
 
 # import utils as utils
 # from models.nn.components import Normalization, StochasticDepth, DropoutNd

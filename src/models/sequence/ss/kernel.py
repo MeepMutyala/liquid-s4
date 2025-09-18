@@ -17,10 +17,10 @@ import numpy as np
 from einops import rearrange, repeat
 from opt_einsum import contract, contract_expression
 
-from ....hippo import hippo
+from liquid_s4.models.hippo import hippo
 from . import dplr
-from ....functional.krylov import krylov, power
-from ....utils import train
+from liquid_s4.models.functional.krylov import krylov, power
+from liquid_s4.utils import train
 
 log = train.get_logger(__name__)
 
@@ -36,16 +36,16 @@ except:
 
 try:
     import pykeops
-    from ....functional.cauchy import cauchy_conj
-    from ....functional.vandermonde import log_vandermonde, log_vandermonde_transpose
+    from liquid_s4.models.functional.cauchy import cauchy_conj
+    from liquid_s4.models.functional.vandermonde import log_vandermonde, log_vandermonde_transpose
 
     has_pykeops = True
     log.info("Pykeops installation found.")
 except ImportError:
     has_pykeops = False
-    from ....functional.cauchy import cauchy_naive
-    from ....functional.vandermonde import log_vandermonde_naive as log_vandermonde
-    from ....functional.vandermonde import log_vandermonde_transpose_naive as log_vandermonde_transpose
+    from liquid_s4.models.functional.cauchy import cauchy_naive
+    from liquid_s4.models.functional.vandermonde import log_vandermonde_naive as log_vandermonde
+    from liquid_s4.models.functional.vandermonde import log_vandermonde_transpose_naive as log_vandermonde_transpose
     if not has_cauchy_extension:
         log.error(
             "Falling back on slow Cauchy kernel. Install at least one of pykeops or the CUDA extension for memory efficiency."
