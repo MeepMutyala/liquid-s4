@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 
-import src.utils as utils
-from src.models.sequence.rnns.cells import CellBase
-from src.models.sequence import SequenceModule
+import liquid_s4.utils as utils
+from liquid_s4.models.sequence.rnns.cells import CellBase
+from liquid_s4.models.sequence import SequenceModule
 
 # [21-09-12 AG]: We previously set up a way to register RNNCell classes, which gives them a "local" name
 # To convert this mapping from name to constructor, we use the fact that the str representation of a constructor is "<class '_target_'>"

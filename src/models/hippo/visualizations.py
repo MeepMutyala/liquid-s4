@@ -16,7 +16,7 @@ from scipy import linalg as la
 from scipy import special as ss
 from einops import rearrange, repeat, reduce
 
-import src.models.functional.unroll as unroll # Not necessary, can comment out and set fast=False in HiPPO modules
+import liquid_s4.models.functional.unroll as unroll # Not necessary, can comment out and set fast=False in HiPPO modules
 
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation

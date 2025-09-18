@@ -8,10 +8,10 @@ import torch.nn.utils as U
 from einops import rearrange, repeat
 from omegaconf import DictConfig
 
-from src.models.hippo import transition
-from src.models.sequence.ss.linear_system_recurrence import linearsystem
-from src.models.functional.toeplitz import causal_convolution
-from src.models.sequence.base import SequenceModule
+from liquid_s4.models.hippo import transition
+from liquid_s4.models.sequence.ss.linear_system_recurrence import linearsystem
+from liquid_s4.models.functional.toeplitz import causal_convolution
+from liquid_s4.models.sequence.base import SequenceModule
 
 
 class RecurrentLSSL(SequenceModule):

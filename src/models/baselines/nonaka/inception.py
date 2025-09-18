@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
-from src.models.baselines.nonaka.basic_conv1d import AdaptiveConcatPool1d, create_head1d
+from liquid_s4.models.baselines.nonaka.basic_conv1d import AdaptiveConcatPool1d, create_head1d
 
 ########################################################################################################
 # Inception time inspired by https://github.com/hfawaz/InceptionTime/blob/master/classifiers/inception.py and https://github.com/tcapelle/TimeSeries_fastai/blob/master/inception.py

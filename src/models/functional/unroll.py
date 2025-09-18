@@ -7,8 +7,8 @@ import torch.nn.functional as F
 import numpy as np
 import math
 
-from src.models.functional.toeplitz import triangular_toeplitz_multiply, triangular_toeplitz_multiply_padded
-from src.utils.permutations import bitreversal_po2, bitreversal_permutation
+from liquid_s4.models.functional.toeplitz import triangular_toeplitz_multiply, triangular_toeplitz_multiply_padded
+from liquid_s4.utils.permutations import bitreversal_po2, bitreversal_permutation
 
 
 

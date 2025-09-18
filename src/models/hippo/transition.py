@@ -13,8 +13,8 @@ from einops import rearrange
 # from extensions.legt.legt import legt_gbt_forward, legt_gbt_backward, legt_gbt_forward_t, legt_gbt_backward_t
 # from trid.trid import trid_gbt_forward, trid_gbt_backward, trid_solve
 # from models.nn.krylov import krylov
-from src.models.hippo.hippo import transition
-from src.models.functional.toeplitz import causal_convolution, causal_convolution_inverse, causal_convolution_inverse_wrong, construct_toeplitz
+from liquid_s4.models.hippo.hippo import transition
+from liquid_s4.models.functional.toeplitz import causal_convolution, causal_convolution_inverse, causal_convolution_inverse_wrong, construct_toeplitz
 
 # TODO figure out if we actually need this
 try:

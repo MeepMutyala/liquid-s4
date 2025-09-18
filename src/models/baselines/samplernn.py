@@ -4,11 +4,11 @@ from torch.nn import init
 import math
 import numpy as np
 
-from src.models.baselines.lstm import TorchLSTM
-from src.models.baselines.gru import TorchGRU
-from src.models.sequence.base import SequenceModule
-from src.models.sequence.ss.s4 import S4
-from src.dataloaders.audio import mu_law_decode, linear_decode, q_zero
+from liquid_s4.models.baselines.lstm import TorchLSTM
+from liquid_s4.models.baselines.gru import TorchGRU
+from liquid_s4.models.sequence.base import SequenceModule
+from liquid_s4.models.sequence.ss.s4 import S4
+from liquid_s4.dataloaders.audio import mu_law_decode, linear_decode, q_zero
 
 class StackedRNN(SequenceModule):
     """

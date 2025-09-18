@@ -12,8 +12,8 @@ import torch.nn.functional as F
 import torch.utils.data
 from einops import rearrange, reduce, repeat
 
-from src.models.sequence import SequenceModule
-from src.models.nn.components import Normalization
+from liquid_s4.models.sequence import SequenceModule
+from liquid_s4.models.nn.components import Normalization
 
 class ResidualBlock(nn.Module):
     def __init__(self, d, layer, norm='none', dropout=0.0):

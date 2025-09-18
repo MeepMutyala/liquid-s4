@@ -1,8 +1,8 @@
 import numpy as np
 from pytorch_lightning.callbacks import Callback
 
-import src.utils as utils
-from src.utils import registry
+import liquid_s4.utils as utils
+from liquid_s4.utils import registry
 
 
 class ProgressiveResizing(Callback):

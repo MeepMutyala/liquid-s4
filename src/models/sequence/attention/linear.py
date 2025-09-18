@@ -10,8 +10,8 @@ from einops import rearrange
 from fast_transformers.feature_maps import elu_feature_map
 from fast_transformers.masking import TriangularCausalMask
 
-from models.sequence.base import SequenceModule, TransposedModule
-import src.models.nn.utils as U
+from liquid_s4.models.sequence.base import SequenceModule, TransposedModule
+import liquid_s4.models.nn.utils as U
 
 try:
     from apex import amp

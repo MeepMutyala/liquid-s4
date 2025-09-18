@@ -20,10 +20,10 @@ from einops import rearrange
 # from .base import SequenceModule  
 # from ..nn.components import Normalization, DropoutNd
 
-from utils.config import to_list, to_dict
-from models.sequence.block import SequenceResidualBlock
-from models.sequence.base import SequenceModule  
-from models.nn.components import Normalization, DropoutNd
+from liquid_s4.utils.config import to_list, to_dict
+from liquid_s4.models.sequence.block import SequenceResidualBlock
+from liquid_s4.models.sequence.base import SequenceModule  
+from liquid_s4.models.nn.components import Normalization, DropoutNd
 
 
 class SequenceModel(SequenceModule):

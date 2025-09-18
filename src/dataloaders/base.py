@@ -11,7 +11,7 @@ import torchaudio.functional as TF
 import torchvision
 from einops import rearrange
 from einops.layers.torch import Rearrange
-from src.utils import is_list, permutations
+from liquid_s4.utils import is_list, permutations
 from torch.nn import functional as F
 
 def deprecated(cls_or_func):

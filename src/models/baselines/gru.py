@@ -2,9 +2,9 @@
 
 import torch
 from torch import nn
-from src.models.sequence import SequenceModule, TransposedModule
+from liquid_s4.models.sequence import SequenceModule, TransposedModule
 from einops import rearrange
-import src.models.nn.utils as U
+import liquid_s4.models.nn.utils as U
 
 @TransposedModule
 class TorchGRU(nn.GRU, SequenceModule):

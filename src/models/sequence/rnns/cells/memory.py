@@ -8,9 +8,9 @@ import numpy as np
 from scipy import signal
 from scipy import linalg as la
 
-from src.models.sequence.rnns.cells.basic import RNNCell
-from src.models.nn.components import LinearActivation, Activation # , get_initializer
-from src.models.nn.gate import Gate
+from liquid_s4.models.sequence.rnns.cells.basic import RNNCell
+from liquid_s4.models.nn.components import LinearActivation, Activation # , get_initializer
+from liquid_s4.models.nn.gate import Gate
 
 
 forward_aliases   = ['euler', 'forward_euler', 'forward', 'forward_diff']

@@ -2,9 +2,9 @@
 
 import torch
 from torch import nn
-from src.models.sequence import SequenceModule
+from liquid_s4.models.sequence import SequenceModule
 from einops import rearrange
-import src.models.nn.utils as U
+import liquid_s4.models.nn.utils as U
 
 class TorchLSTM(nn.LSTM, SequenceModule):
     """ Wrapper around nn.LSTM to make it compatible with our RNN interface """

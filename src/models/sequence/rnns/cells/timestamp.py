@@ -5,8 +5,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
 
-from src.models.sequence.rnns.cells.memory import MemoryCell, forward_aliases, backward_aliases, bilinear_aliases, zoh_aliases
-from src.models.hippo.transition import (
+from liquid_s4.models.sequence.rnns.cells.memory import MemoryCell, forward_aliases, backward_aliases, bilinear_aliases, zoh_aliases
+from liquid_s4.models.hippo.transition import (
     LegSAdaptiveTransitionManual,
     LegTAdaptiveTransitionManual,
     LagTAdaptiveTransitionManual,

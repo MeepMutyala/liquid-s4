@@ -9,7 +9,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from src.torch.utils.dlpack import to_dlpack, from_dlpack
+from liquid_s4.torch.utils.dlpack import to_dlpack, from_dlpack
 
 
 use_cupy = True

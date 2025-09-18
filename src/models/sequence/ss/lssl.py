@@ -7,12 +7,12 @@ import torch.nn.functional as F
 from einops import rearrange, repeat
 from omegaconf import DictConfig
 
-from src.models.nn import Activation
-from src.models.functional.krylov import krylov
-from src.models.hippo import transition, hippo
-from src.models.functional.toeplitz import causal_convolution
-from src.models.sequence.base import SequenceModule, TransposedModule
-import src.models.nn.utils as U
+from liquid_s4.models.nn import Activation
+from liquid_s4.models.functional.krylov import krylov
+from liquid_s4.models.hippo import transition, hippo
+from liquid_s4.models.functional.toeplitz import causal_convolution
+from liquid_s4.models.sequence.base import SequenceModule, TransposedModule
+import liquid_s4.models.nn.utils as U
 
 def linear_system_from_krylov(u, C, D, k):
     """

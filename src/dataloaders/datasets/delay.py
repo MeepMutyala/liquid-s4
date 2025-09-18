@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from src.dataloaders.utils.signal import whitesignal
+from liquid_s4.dataloaders.utils.signal import whitesignal
 
 
 class DelayTrainDataset(torch.utils.data.Dataset):

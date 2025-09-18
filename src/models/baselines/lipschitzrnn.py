@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
-from src.models.sequence.base import SequenceModule
+from liquid_s4.models.sequence.base import SequenceModule
 
 from copy import deepcopy
 

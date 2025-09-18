@@ -8,7 +8,7 @@ import torchaudio
 from torch import nn
 from torch.nn import functional as F
 
-from src.dataloaders.base import default_data_path, SequenceDataset, deprecated
+from liquid_s4.dataloaders.base import default_data_path, SequenceDataset, deprecated
 
 
 def minmax_scale(tensor, range_min=0, range_max=1):
@@ -305,7 +305,7 @@ class QuantizedAutoregressiveAudio(SequenceDataset):
         }
 
     def setup(self):
-        from src.dataloaders.audio import QuantizedAudioDataset
+        from liquid_s4.dataloaders.audio import QuantizedAudioDataset
         assert self.path is not None or self.data_dir is not None, "Pass a path to a folder of audio: either `data_dir` for full directory or `path` for relative path."
         if self.data_dir is None:
             self.data_dir = default_data_path / self.path
@@ -489,7 +489,7 @@ class SpeechCommands09Autoregressive(SequenceDataset):
         }
 
     def setup(self):
-        from src.dataloaders.audio import SpeechCommands09
+        from liquid_s4.dataloaders.audio import SpeechCommands09
         self.data_dir = self.data_dir or default_data_path / self._name_
 
         self.dataset_train = SpeechCommands09(
@@ -615,7 +615,7 @@ class MaestroAutoregressive(SequenceDataset):
         }
 
     def setup(self):
-        from src.dataloaders.audio import MaestroDataset
+        from liquid_s4.dataloaders.audio import MaestroDataset
         self.data_dir = self.data_dir or default_data_path / self._name_ / 'maestro-v3.0.0'
 
         self.dataset_train = MaestroDataset(
@@ -763,7 +763,7 @@ class LJSpeechAutoregressive(SequenceDataset):
         }
 
     def setup(self):
-        from src.dataloaders.audio import LJSpeech
+        from liquid_s4.dataloaders.audio import LJSpeech
         self.data_dir = self.data_dir or default_data_path / self._name_ / 'LJSpeech-1.1' / 'wavs'
 
         self.dataset_train = LJSpeech(
@@ -891,7 +891,7 @@ class SpeechCommands09Classification(SequenceDataset):
         }
 
     def setup(self):
-        from src.dataloaders.audio import _SpeechCommands09Classification
+        from liquid_s4.dataloaders.audio import _SpeechCommands09Classification
         self.data_dir = self.data_dir or default_data_path / 'sc09'
 
         self.dataset_train = _SpeechCommands09Classification(
@@ -963,7 +963,7 @@ class SpeechCommandsGeneration(SequenceDataset):
         self.l_output = self.length
 
     def setup(self):
-        from src.dataloaders.datasets.sc import _SpeechCommandsGeneration
+        from liquid_s4.dataloaders.datasets.sc import _SpeechCommandsGeneration
 
         # TODO refactor with data_dir argument
         self.dataset_train = _SpeechCommandsGeneration(
@@ -1037,7 +1037,7 @@ class Music(SequenceDataset):
         return
 
     def setup(self):
-        from src.dataloaders.music import _Music
+        from liquid_s4.dataloaders.music import _Music
 
         self.music_class = _Music(
             path=default_data_path,

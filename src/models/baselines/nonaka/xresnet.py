@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.models.baselines.nonaka.basic_conv1d import create_head1d, Flatten
+from liquid_s4.models.baselines.nonaka.basic_conv1d import create_head1d, Flatten
 
 from enum import Enum
 import re

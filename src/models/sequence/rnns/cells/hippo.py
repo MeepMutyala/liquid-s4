@@ -3,8 +3,8 @@ import torch.nn as nn
 from torch.nn import functional as F
 import numpy as np
 
-from src.models.sequence.rnns.cells.memory import LTICell, LSICell
-from src.models.hippo.hippo import transition
+from liquid_s4.models.sequence.rnns.cells.memory import LTICell, LSICell
+from liquid_s4.models.hippo.hippo import transition
 
 
 class HiPPOLTICell(LTICell):

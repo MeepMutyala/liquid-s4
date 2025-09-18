@@ -17,7 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 import warnings
 warnings.filterwarnings("ignore")
 
-from src.dataloaders.base import SequenceDataset, default_data_path
+from liquid_s4.dataloaders.base import SequenceDataset, default_data_path
 
 
 class TimeFeature:

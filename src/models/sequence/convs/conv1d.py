@@ -3,8 +3,8 @@
 import torch
 from torch import nn
 
-from src.models.sequence.base import SequenceModule
-from src.models.nn import Activation
+from liquid_s4.models.sequence.base import SequenceModule
+from liquid_s4.models.nn import Activation
 
 class Conv1d(SequenceModule):
     """ Simple wrapper for nn.Conv1d """

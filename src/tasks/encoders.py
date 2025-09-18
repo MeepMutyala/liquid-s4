@@ -7,11 +7,11 @@ from torch import nn
 import torch.nn.functional as F
 from einops import rearrange
 
-import src.models.nn.utils as U
-import src.utils as utils
-import src.utils.config
-from src.models.sequence.block import SequenceResidualBlock
-from src.models.nn.components import Normalization
+import liquid_s4.models.nn.utils as U
+import liquid_s4.utils as utils
+import liquid_s4.utils.config
+from liquid_s4.models.sequence.block import SequenceResidualBlock
+from liquid_s4.models.nn.components import Normalization
 
 class Encoder(nn.Module):
     """Encoder abstraction

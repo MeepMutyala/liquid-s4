@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable, Function
 import numpy as np
 
-from src.models.sequence.base import SequenceModule
+from liquid_s4.models.sequence.base import SequenceModule
 
 def mu_law_expansion(data, mu):
     s = np.sign(data) * (np.exp(np.abs(data) * np.log(mu + 1)) - 1) / mu

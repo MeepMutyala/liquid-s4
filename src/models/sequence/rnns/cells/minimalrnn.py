@@ -5,9 +5,9 @@ https://arxiv.org/abs/1711.06788
 [21-10-22] I believe this has not been tested in awhile but should work with minimal modifications
 """
 
-from src.models.sequence.rnns.cells.basic import CellBase
-from src.models.nn import LinearActivation
-from src.models.nn.gate import Gate
+from liquid_s4.models.sequence.rnns.cells.basic import CellBase
+from liquid_s4.models.nn import LinearActivation
+from liquid_s4.models.nn.gate import Gate
 
 class MinimalRNNCell(CellBase):
     name = 'mrnn'

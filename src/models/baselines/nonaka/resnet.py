@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
-from src.models.baselines.nonaka.basic_conv1d import create_head1d, Flatten
+from liquid_s4.models.baselines.nonaka.basic_conv1d import create_head1d, Flatten
 ###############################################################################################
 # Standard resnet
 

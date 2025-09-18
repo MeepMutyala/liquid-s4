@@ -19,7 +19,7 @@ from collections import OrderedDict
 
 import torch
 
-import src.utils as utils
+import liquid_s4.utils as utils
 
 
 class Vocab(object):

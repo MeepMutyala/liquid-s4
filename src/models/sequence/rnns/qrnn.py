@@ -9,11 +9,11 @@ import torch.nn.functional as F
 import numpy as np
 from scipy import signal
 
-from src.models.nn import LinearActivation
-from src.models.functional import unroll
-from src.models.hippo.hippo import transition
-from src.models.hippo.transition import TLagTAdaptiveTransitionManual, LagTAdaptiveTransitionManual, LegTAdaptiveTransitionManual, LegSAdaptiveTransitionManual, LagTCumsumAdaptiveTransition, TLagTCumsumAdaptiveTransition
-from src.models.sequence.base import SequenceModule
+from liquid_s4.models.nn import LinearActivation
+from liquid_s4.models.functional import unroll
+from liquid_s4.models.hippo.hippo import transition
+from liquid_s4.models.hippo.transition import TLagTAdaptiveTransitionManual, LagTAdaptiveTransitionManual, LegTAdaptiveTransitionManual, LegSAdaptiveTransitionManual, LagTCumsumAdaptiveTransition, TLagTCumsumAdaptiveTransition
+from liquid_s4.models.sequence.base import SequenceModule
 
 class MemoryProjection(nn.Module):
     """ Implements the memory projection operator for fixed dt """

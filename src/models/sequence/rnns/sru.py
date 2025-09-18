@@ -8,10 +8,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
 
-from src.models.sequence.rnns.cells import CellBase
-from src.models.nn import LinearActivation
-import src.models.nn.utils as U
-from src.models.sequence.base import SequenceModule, TransposedModule
+from liquid_s4.models.sequence.rnns.cells import CellBase
+from liquid_s4.models.nn import LinearActivation
+import liquid_s4.models.nn.utils as U
+from liquid_s4.models.sequence.base import SequenceModule, TransposedModule
 
 class SRUCell(CellBase):
     """ Implementation of the pure SRU cell that works with the models.rnn.RNN class """

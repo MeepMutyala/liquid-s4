@@ -4,10 +4,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.models.nn import LinearActivation, Activation # , get_initializer
-from src.models.nn.gate import Gate
-from src.models.nn.orthogonal import OrthogonalLinear
-from src.models.sequence.base import SequenceModule
+from liquid_s4.models.nn import LinearActivation, Activation # , get_initializer
+from liquid_s4.models.nn.gate import Gate
+from liquid_s4.models.nn.orthogonal import OrthogonalLinear
+from liquid_s4.models.sequence.base import SequenceModule
 
 class CellBase(SequenceModule):
     """ Abstract class for our recurrent cell interface.

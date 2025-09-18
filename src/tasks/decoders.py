@@ -13,9 +13,9 @@ from einops import rearrange, reduce
 # from ..utils import train
 # from .. import utils  # Equivalent of 'import src.utils as utils'
 
-from models.nn import utils as U
-from utils import config
-from utils import train
+from liquid_s4.models.nn import utils as U
+from liquid_s4.utils import config
+from liquid_s4.utils import train
 
 log = train.get_logger(__name__)
 

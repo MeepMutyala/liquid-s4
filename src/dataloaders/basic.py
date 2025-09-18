@@ -3,9 +3,9 @@ import numpy as np
 import torch
 import torchvision
 from einops.layers.torch import Rearrange
-from src.utils import permutations
+from liquid_s4.utils import permutations
 
-from src.dataloaders.base import default_data_path, ImageResolutionSequenceDataset, ResolutionSequenceDataset, SequenceDataset
+from liquid_s4.dataloaders.base import default_data_path, ImageResolutionSequenceDataset, ResolutionSequenceDataset, SequenceDataset
 
 
 class MNIST(SequenceDataset):
@@ -237,7 +237,7 @@ class SpeechCommands(ResolutionSequenceDataset):
     def setup(self):
         self.data_dir = self.data_dir or default_data_path # TODO make same logic as other classes
 
-        from src.dataloaders.datasets.sc import _SpeechCommands
+        from liquid_s4.dataloaders.datasets.sc import _SpeechCommands
 
         # TODO refactor with data_dir argument
         self.dataset_train = _SpeechCommands(

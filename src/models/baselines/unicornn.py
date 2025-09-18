@@ -10,7 +10,7 @@ from torch.autograd import Function
 from torch.nn import Parameter
 from collections import namedtuple
 
-from src.models.sequence.base import SequenceModule, TransposedModule
+from liquid_s4.models.sequence.base import SequenceModule, TransposedModule
 
 try:
     from cupy.cuda import function

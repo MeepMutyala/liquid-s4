@@ -14,8 +14,8 @@ from scipy import linalg as la
 from scipy import special as ss
 import nengo
 
-import src.models.functional.unroll as unroll
-from src.models.hippo.hippo import transition
+import liquid_s4.models.functional.unroll as unroll
+from liquid_s4.models.hippo.hippo import transition
 
 
 """

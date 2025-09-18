@@ -23,8 +23,8 @@ if optimized:
 else:
     contract = torch.einsum
 
-from src.models.sequence.ss.kernel import HippoSSKernel, _conj
-from src.models.nn import LinearActivation, Activation
+from liquid_s4.models.sequence.ss.kernel import HippoSSKernel, _conj
+from liquid_s4.models.nn import LinearActivation, Activation
 
 
 class S4(nn.Module):
@@ -62,7 +62,7 @@ class S4(nn.Module):
 
         super().__init__()
         if verbose:
-            import src.utils.train
+            import liquid_s4.utils.train
 
             log = src.utils.train.get_logger(__name__)
             log.info(f"Constructing S4 (H, N, L) = ({d_model}, {d_state}, {l_max})")

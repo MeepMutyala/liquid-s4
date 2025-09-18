@@ -3,9 +3,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.models.sequence.base import SequenceModule
-from src.models.sequence.pool import DownPool, UpPool
-from src.models.sequence.block import SequenceResidualBlock
+from liquid_s4.models.sequence.base import SequenceModule
+from liquid_s4.models.sequence.pool import DownPool, UpPool
+from liquid_s4.models.sequence.block import SequenceResidualBlock
 
 
 class Sashimi(SequenceModule):

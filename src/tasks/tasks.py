@@ -7,14 +7,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
 from omegaconf import ListConfig
-from src.models.nn.components import ReversibleInstanceNorm1dInput, ReversibleInstanceNorm1dOutput, \
+from liquid_s4.models.nn.components import ReversibleInstanceNorm1dInput, ReversibleInstanceNorm1dOutput, \
     TSNormalization, TSInverseNormalization
 
-from src.models.nn.adaptive_softmax import AdaptiveEmbedding, ProjectedAdaptiveLogSoftmax
-import src.tasks.metrics as M
-import src.models.nn.utils as U
+from liquid_s4.models.nn.adaptive_softmax import AdaptiveEmbedding, ProjectedAdaptiveLogSoftmax
+import liquid_s4.tasks.metrics as M
+import liquid_s4.models.nn.utils as U
 import torchmetrics as tm
-from src.utils.config import to_list, instantiate
+from liquid_s4.utils.config import to_list, instantiate
 
 
 class BaseTask:
